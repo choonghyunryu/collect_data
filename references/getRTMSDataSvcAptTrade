@@ -1,0 +1,943 @@
+<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema"><grammars><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+<xs:element name="GetRTMSDataSvcAptRentDevVO" type="getRTMSDataSvcAptRentDevVO"/>
+<xs:element name="GetRTMSDataSvcAptRentVO" type="getRTMSDataSvcAptRentVO"/>
+<xs:element name="GetRTMSDataSvcAptTradeDevVO" type="getRTMSDataSvcAptTradeDevVO"/>
+<xs:element name="GetRTMSDataSvcAptTradeVO" type="getRTMSDataSvcAptTradeVO"/>
+<xs:element name="GetRTMSDataSvcLandTradeVO" type="getRTMSDataSvcLandTradeVO"/>
+<xs:element name="GetRTMSDataSvcNrgTradeVO" type="getRTMSDataSvcNrgTradeVO"/>
+<xs:element name="GetRTMSDataSvcOffiRentDevVO" type="getRTMSDataSvcOffiRentDevVO"/>
+<xs:element name="GetRTMSDataSvcOffiRentVO" type="getRTMSDataSvcOffiRentVO"/>
+<xs:element name="GetRTMSDataSvcOffiTradeDevVO" type="getRTMSDataSvcOffiTradeDevVO"/>
+<xs:element name="GetRTMSDataSvcOffiTradeVO" type="getRTMSDataSvcOffiTradeVO"/>
+<xs:element name="GetRTMSDataSvcRHRentDevVO" type="getRTMSDataSvcRHRentDevVO"/>
+<xs:element name="GetRTMSDataSvcRHRentVO" type="getRTMSDataSvcRHRentVO"/>
+<xs:element name="GetRTMSDataSvcRHTradeDevVO" type="getRTMSDataSvcRHTradeDevVO"/>
+<xs:element name="GetRTMSDataSvcRHTradeVO" type="getRTMSDataSvcRHTradeVO"/>
+<xs:element name="GetRTMSDataSvcSHRentVO" type="getRTMSDataSvcSHRentVO"/>
+<xs:element name="GetRTMSDataSvcSHTradeVO" type="getRTMSDataSvcSHTradeVO"/>
+<xs:element name="GetRTMSDataSvcSilvTradeDevVO" type="getRTMSDataSvcSilvTradeDevVO"/>
+<xs:element name="GetRTMSDataSvcSilvTradeVO" type="getRTMSDataSvcSilvTradeVO"/>
+<xs:element name="header" nillable="true" type="xs:anyType"/>
+<xs:element name="response" nillable="true" type="xs:anyType"/>
+<xs:complexType name="getRTMSDataSvcLandTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcLandTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcLandTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcLandTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcLandTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcLandTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래면적" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="구분" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="용도지역" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지목" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcOffiRentBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcOffiRentVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcRHTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcRHTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="대지권면적" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="연립다세대" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcSilvTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcSilvTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="구분" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:decimal"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:long"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHRentResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcSHRentBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHRentHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHRentBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcSHRentVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHRentVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="계약면적" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금액" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세금액" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcNrgTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcNrgTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcNrgTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcNrgTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcNrgTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcNrgTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건물면적" type="xs:string"/>
+<xs:element minOccurs="0" name="건물주용도" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="구분" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="대지면적" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="용도지역" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="유형" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:short"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcOffiTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcOffiTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:long"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcAptTradeDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcAptTradeDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="아파트" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="일련번호" type="xs:string"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcRHRentDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcRHRentDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금액" type="xs:string"/>
+<xs:element minOccurs="0" name="연립다세대" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세금액" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="일련번호" type="xs:string"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcRHRentBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcRHRentVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHRentVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금액" type="xs:string"/>
+<xs:element minOccurs="0" name="연립다세대" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세금액" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcAptTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcAptTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="아파트" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHTradeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcSHTradeBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHTradeHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHTradeBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcSHTradeVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSHTradeVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="대지면적" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="연면적" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="주택유형" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcOffiRentDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcOffiRentDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiRentDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcOffiTradeDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcOffiTradeDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcOffiTradeDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcAptRentBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcAptRentVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금액" type="xs:string"/>
+<xs:element minOccurs="0" name="아파트" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세금액" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcAptRentDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcAptRentDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcAptRentDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="갱신요구권사용" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:string"/>
+<xs:element minOccurs="0" name="계약구분" type="xs:string"/>
+<xs:element minOccurs="0" name="계약기간" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="보증금액" type="xs:string"/>
+<xs:element minOccurs="0" name="아파트" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="월세금액" type="xs:string"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="일련번호" type="xs:string"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약보증금" type="xs:string"/>
+<xs:element minOccurs="0" name="종전계약월세" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcSilvTradeDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcSilvTradeDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcSilvTradeDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="구분" type="xs:string"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="단지" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="시군구" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeDevResponse">
+<xs:sequence>
+<xs:element minOccurs="0" ref="header"/>
+<xs:element minOccurs="0" name="body" type="getRTMSDataSvcRHTradeDevBody"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeDevHeader">
+<xs:sequence>
+<xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+<xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeDevBody">
+<xs:sequence>
+<xs:element minOccurs="0" name="items">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="getRTMSDataSvcRHTradeDevVO"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="numOfRows" type="xs:int"/>
+<xs:element minOccurs="0" name="pageNo" type="xs:int"/>
+<xs:element minOccurs="0" name="totalCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRTMSDataSvcRHTradeDevVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="거래금액" type="xs:string"/>
+<xs:element minOccurs="0" name="거래유형" type="xs:string"/>
+<xs:element minOccurs="0" name="건축년도" type="xs:decimal"/>
+<xs:element minOccurs="0" name="년" type="xs:long"/>
+<xs:element minOccurs="0" name="대지권면적" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물본번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명건물부번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명일련번호코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명지상지하코드" type="xs:string"/>
+<xs:element minOccurs="0" name="도로명코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동본번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동부번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동시군구코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동읍면동코드" type="xs:string"/>
+<xs:element minOccurs="0" name="법정동지번코드" type="xs:string"/>
+<xs:element minOccurs="0" name="연립다세대" type="xs:string"/>
+<xs:element minOccurs="0" name="월" type="xs:long"/>
+<xs:element minOccurs="0" name="일" type="xs:long"/>
+<xs:element minOccurs="0" name="일련번호" type="xs:string"/>
+<xs:element minOccurs="0" name="전용면적" type="xs:string"/>
+<xs:element minOccurs="0" name="중개사소재지" type="xs:string"/>
+<xs:element minOccurs="0" name="지번" type="xs:string"/>
+<xs:element minOccurs="0" name="지역코드" type="xs:string"/>
+<xs:element minOccurs="0" name="층" type="xs:string"/>
+<xs:element minOccurs="0" name="해제사유발생일" type="xs:string"/>
+<xs:element minOccurs="0" name="해제여부" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+</grammars><resources base="http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc"><resource path="/"><resource path="getRTMSDataSvcAptRent"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcAptRentDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcAptTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcAptTradeDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcLandTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcNrgTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcOffiRent"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcOffiRentDev"><param name="LAWD_CD" style="template" type="xs:string"/><param name="DEAL_YMD" style="template" type="xs:string"/><method name="GET"><request><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcOffiTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcOffiTradeDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcRHRent"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcRHRentDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcRHTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcRHTradeDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcSHRent"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcSHTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcSilvTrade"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource><resource path="getRTMSDataSvcSilvTradeDev"><method name="GET"><request><param name="LAWD_CD" style="query" type="xs:string"/><param name="DEAL_YMD" style="query" type="xs:string"/><param name="pageNo" style="query" default="1" type="xs:int"/><param name="numOfRows" style="query" default="10" type="xs:int"/></request><response><representation mediaType="application/xml"/><representation mediaType="application/json"/></response></method></resource></resource></resources></application>
