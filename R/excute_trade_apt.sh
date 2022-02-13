@@ -5,6 +5,7 @@ export LANG=ko_KR.UTF-8
 
 # 오늘 날짜
 YMD=`date "+%Y-%m-%d"`
+
 # 작업 디렉토리
 ## Your directory
 work_dir='/collect_data'

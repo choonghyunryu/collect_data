@@ -6,6 +6,6 @@
 data/TRADE.sqlite
 data/GISDB.sqlite
 data/NEWS.sqlite
-02_import_trade_apt_orignal.R
+02_import_trade_apt_original.R
 03_import_naver_news_original.R
 excute_trade_apt_original.sh
